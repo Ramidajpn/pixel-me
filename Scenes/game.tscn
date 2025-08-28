@@ -1,10 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://3hyv3yi7jnku"]
+[gd_scene load_steps=6 format=3 uid="uid://c1isqymd7oabg"]
 
-[ext_resource type="Texture2D" uid="uid://cxva8ob7l78u6" path="res://Scenes/Screenshot 2025-08-27 001153.png" id="1_ebmjs"]
+[ext_resource type="Texture2D" uid="uid://c8mrulxeysunt" path="res://Scenes/พื้นหลัง .png" id="2_3dryh"]
+[ext_resource type="Script" uid="uid://d2xk3sgjgf3xr" path="res://Scenes/WebcamClient.gd" id="2_qxrlw"]
+[ext_resource type="Texture2D" uid="uid://bbllndkfdkig5" path="res://Scenes/ปุ่มnext.png" id="3_3dryh"]
+[ext_resource type="Script" uid="uid://rl6vj7yo7pj6" path="res://Scenes/next.gd" id="4_wowpa"]
+
+[sub_resource type="CameraTexture" id="CameraTexture_ebmjs"]
 
 [node name="Game" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1145.0
-offset_bottom = 650.0
-texture = ExtResource("1_ebmjs")
+[node name="พื้นหลัง" type="Sprite2D" parent="."]
+position = Vector2(576.5, 323)
+scale = Vector2(0.597396, 0.596296)
+texture = ExtResource("2_3dryh")
+
+[node name="WebcamDisplay" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(640, 480)
+offset_left = 243.0
+offset_top = 49.0
+offset_right = 883.0
+offset_bottom = 529.0
+texture = SubResource("CameraTexture_ebmjs")
+script = ExtResource("2_qxrlw")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -368.0
+offset_top = -345.0
+offset_right = 1552.0
+offset_bottom = 735.0
+texture_normal = ExtResource("3_3dryh")
+script = ExtResource("4_wowpa")
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_texture_button_pressed"]
