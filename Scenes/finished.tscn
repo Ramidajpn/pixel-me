@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://clymmoticek7r"]
+
+[ext_resource type="Texture2D" uid="uid://bis7rhi8nxtrp" path="res://Scenes/พื้นหลังจบ.png" id="1_weud0"]
+[ext_resource type="Texture2D" uid="uid://cr2xdauoul8b5" path="res://Scenes/บ้าน.png" id="2_m27c6"]
+[ext_resource type="Script" uid="uid://cokttxnontl7o" path="res://Scenes/finished_button.gd" id="3_piryd"]
+
+[node name="Finished" type="Node2D"]
+
+[node name="พื้นหลังจบ" type="Sprite2D" parent="."]
+position = Vector2(580.75, 323)
+scale = Vector2(0.60026, 0.592593)
+texture = ExtResource("1_weud0")
+
+[node name="TextureButton" type="TextureButton" parent="พื้นหลังจบ"]
+offset_left = -960.833
+offset_top = -526.5
+offset_right = 959.167
+offset_bottom = 553.5
+texture_normal = ExtResource("2_m27c6")
+script = ExtResource("3_piryd")
+
+[connection signal="pressed" from="พื้นหลังจบ/TextureButton" to="พื้นหลังจบ/TextureButton" method="_on_title_button_pressed"]
