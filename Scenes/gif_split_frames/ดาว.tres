@@ -1,0 +1,34 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://dhh0188t2yrdy"]
+
+[ext_resource type="Texture2D" uid="uid://cobdorlvwlse7" path="res://Scenes/gif_split_frames/ดาว_0_delay-1s.png" id="1_yhcod"]
+[ext_resource type="Texture2D" uid="uid://pmkmij1lb3oh" path="res://Scenes/gif_split_frames/ดาว_1_delay-1s.png" id="2_vdrat"]
+[ext_resource type="Texture2D" uid="uid://ceryuldea7n5l" path="res://Scenes/gif_split_frames/ดาว_2_delay-1s.png" id="3_6fef0"]
+[ext_resource type="Texture2D" uid="uid://bspilk3d2ne0j" path="res://Scenes/gif_split_frames/ดาว_3_delay-1s.png" id="4_fpac7"]
+[ext_resource type="Texture2D" uid="uid://cbwl37va2jg16" path="res://Scenes/gif_split_frames/ดาว_4_delay-1s.png" id="5_gqcv4"]
+[ext_resource type="Texture2D" uid="uid://dbny1dmau2txl" path="res://Scenes/gif_split_frames/ดาว_5_delay-1s.png" id="6_xc78e"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yhcod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vdrat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6fef0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fpac7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gqcv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xc78e")
+}],
+"loop": true,
+"name": &"ดาว",
+"speed": 5.0
+}]

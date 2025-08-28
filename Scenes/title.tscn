@@ -1,0 +1,62 @@
+[gd_scene load_steps=12 format=3 uid="uid://b1tb7m5fxhos"]
+
+[ext_resource type="Texture2D" uid="uid://cb458rtiucl3y" path="res://Scenes/ท้องฟ้าพื้นหลัง.png" id="1_fp2oq"]
+[ext_resource type="Texture2D" uid="uid://bjrswrbhvttmx" path="res://Scenes/ภูเขาหญ้า.png" id="2_q2qps"]
+[ext_resource type="Texture2D" uid="uid://60iavukn0n5g" path="res://Scenes/พุ่มไม้.png" id="3_yosvi"]
+[ext_resource type="SpriteFrames" uid="uid://b2trijcgpq8dc" path="res://Scenes/gif_split_frames/คน.tres" id="4_3eqdi"]
+[ext_resource type="Script" uid="uid://cmb8pf54vmirg" path="res://Scenes/คน.gd" id="5_cwqts"]
+[ext_resource type="SpriteFrames" uid="uid://dhh0188t2yrdy" path="res://Scenes/gif_split_frames/ดาว.tres" id="5_yu0ss"]
+[ext_resource type="SpriteFrames" uid="uid://blx4ewhccnaeq" path="res://Scenes/gif_split_frames/logo.tres" id="6_6aagf"]
+[ext_resource type="Script" uid="uid://c6tv6520ghekk" path="res://Scenes/ดาว.gd" id="6_kyk5u"]
+[ext_resource type="Script" uid="uid://b3nbs6eq8tlvr" path="res://Scenes/logo.gd" id="7_6aagf"]
+[ext_resource type="Texture2D" uid="uid://dl01mgk155ibh" path="res://Scenes/ปุ่ม_PLAY.png" id="7_kyk5u"]
+[ext_resource type="Script" uid="uid://blu80k5oa11dl" path="res://Scenes/texture_button.gd" id="8_yu0ss"]
+
+[node name="Title screen" type="Node2D"]
+
+[node name="ท้องฟ้าพื้นหลัง" type="Sprite2D" parent="."]
+position = Vector2(579, 325.5)
+scale = Vector2(0.604167, 0.599074)
+texture = ExtResource("1_fp2oq")
+
+[node name="ภูเขาหญ้า" type="Sprite2D" parent="."]
+position = Vector2(582.5, 370)
+scale = Vector2(0.688021, 0.522222)
+texture = ExtResource("2_q2qps")
+
+[node name="พุ่มไม้2" type="Sprite2D" parent="."]
+position = Vector2(577.5, 376.75)
+scale = Vector2(0.601563, 0.506019)
+texture = ExtResource("3_yosvi")
+
+[node name="คน" type="AnimatedSprite2D" parent="."]
+position = Vector2(585, 323)
+scale = Vector2(0.607292, 0.585185)
+sprite_frames = ExtResource("4_3eqdi")
+animation = &"คน"
+script = ExtResource("5_cwqts")
+
+[node name="ดาว" type="AnimatedSprite2D" parent="."]
+position = Vector2(578.5, 295)
+scale = Vector2(0.601562, 0.562037)
+sprite_frames = ExtResource("5_yu0ss")
+animation = &"ดาว"
+frame_progress = 0.647268
+script = ExtResource("6_kyk5u")
+
+[node name="logo" type="AnimatedSprite2D" parent="."]
+position = Vector2(590, 318)
+scale = Vector2(0.572396, 0.551852)
+sprite_frames = ExtResource("6_6aagf")
+frame_progress = 0.0256233
+script = ExtResource("7_6aagf")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -375.0
+offset_top = -383.0
+offset_right = 1545.0
+offset_bottom = 697.0
+texture_normal = ExtResource("7_kyk5u")
+script = ExtResource("8_yu0ss")
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_button_pressed"]

@@ -1,12 +1,10 @@
-[gd_scene format=3 uid="uid://c1isqymd7oabg"]
+[gd_scene load_steps=2 format=3 uid="uid://3hyv3yi7jnku"]
 
-[node name="Title screen" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://cxva8ob7l78u6" path="res://Scenes/Screenshot 2025-08-27 001153.png" id="1_ebmjs"]
 
-[node name="Background" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Game" type="Node2D"]
 
-[node name="TextureButton" type="TextureButton" parent="Background"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1145.0
+offset_bottom = 650.0
+texture = ExtResource("1_ebmjs")
