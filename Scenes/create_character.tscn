@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://bl2qlx45u7xh3"]
+
+[ext_resource type="Script" uid="uid://c7ggcxkfwak6c" path="res://Scenes/create_character.gd" id="1_1kxi7"]
+[ext_resource type="Texture2D" uid="uid://brvf6n7i0qjr7" path="res://asset/พื้นหลัง .png" id="2_krfo1"]
+[ext_resource type="Texture2D" uid="uid://db5srdbdh0qme" path="res://asset/camera.png" id="6_krfo1"]
+
+[node name="CreateCharacter" type="Node2D"]
+script = ExtResource("1_1kxi7")
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.606207, 0.609043)
+texture = ExtResource("2_krfo1")
+
+[node name="WebcamDisplay" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="CountdownLabel" type="Label" parent="UI"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="LoadingScreen" type="ColorRect" parent="UI"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LoadingLabel" type="Label" parent="UI/LoadingScreen"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="RevealScreen" type="Control" parent="UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DressUpButton" type="TextureButton" parent="UI/RevealScreen"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="RenewButton" type="TextureButton" parent="UI/RevealScreen"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="CameraUI" type="CanvasLayer" parent="."]
+
+[node name="capture" type="TextureButton" parent="CameraUI"]
+offset_left = 893.0
+offset_top = 177.0
+offset_right = 1333.0
+offset_bottom = 617.0
+scale = Vector2(0.341534, 0.353856)
+texture_normal = ExtResource("6_krfo1")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="UI/RevealScreen/DressUpButton" to="." method="_on_dress_up_button_pressed"]
+[connection signal="pressed" from="UI/RevealScreen/RenewButton" to="." method="_on_renew_button_pressed"]
+[connection signal="pressed" from="CameraUI/capture" to="." method="_on_capture_button_pressed"]
+[connection signal="pressed" from="CameraUI/capture" to="." method="_on_capture_pressed"]

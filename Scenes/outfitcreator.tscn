@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8v1fk11hkvgb"]
+
+[ext_resource type="Script" uid="uid://d0vyy7biykj41" path="res://outfit.gd" id="1_3qcs3"]
+[ext_resource type="Texture2D" uid="uid://c0p4rn3itohp0" path="res://asset/Assetv5/body.png" id="2_2ktlm"]
+[ext_resource type="Texture2D" uid="uid://c671wxjajjyao" path="res://asset/Assetv5/Untitled_Artwork-11.png" id="3_my5dp"]
+[ext_resource type="Texture2D" uid="uid://csgnxxlhwtuqb" path="res://asset/Assetv5/Untitled_Artwork-14.png" id="4_n3mve"]
+
+[node name="outfitcreator" type="Node2D"]
+script = ExtResource("1_3qcs3")
+
+[node name="CharacterDisplay" type="Node2D" parent="."]
+
+[node name="body" type="Sprite2D" parent="CharacterDisplay"]
+texture_filter = 1
+position = Vector2(565, 356)
+scale = Vector2(3.14857, 2.87897)
+texture = ExtResource("2_2ktlm")
+
+[node name="eye" type="Sprite2D" parent="CharacterDisplay"]
+texture_filter = 1
+position = Vector2(581, 292)
+scale = Vector2(1.96603, 2.08575)
+texture = ExtResource("3_my5dp")
+
+[node name="mount" type="Sprite2D" parent="CharacterDisplay"]
+texture_filter = 1
+position = Vector2(587, 292)
+scale = Vector2(2.48639, 1.89167)
+texture = ExtResource("4_n3mve")
+
+[node name="hair" type="Sprite2D" parent="CharacterDisplay"]
+texture_filter = 1
+position = Vector2(576, 290)
+scale = Vector2(1.97019, 1.79947)
+
+[node name="shirt" type="Sprite2D" parent="CharacterDisplay"]
+
+[node name="PantsSkirt" type="Sprite2D" parent="CharacterDisplay"]

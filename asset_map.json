@@ -1,0 +1,64 @@
+{
+	"hair_long_bangs": [
+		"res://asset/Assetv5/longbang-a.png",
+		"res://asset/Assetv5/longbang-b.png"
+	],
+	"hair_short_bangs": [
+		"res://asset/Assetv5/shortbang-a.png",
+		"res://asset/Assetv5/shortbang-b.png"
+	],
+	"hair_short": [
+		"res://asset/Assetv5/short-a.png"
+	],
+	"hair_male": [
+		"res://asset/Assetv5/male-a.png",
+		"res://asset/Assetv5/male-b.png",
+		"res://asset/Assetv5/male-c.png",
+		"res://asset/Assetv5/male-d.png",
+		"res://asset/Assetv5/male-e.png",
+		"res://asset/Assetv5/male-f.png"
+	],
+	"bald": [
+	],
+	"hair_tie_1_bangs": [
+		"res://asset/Assetv5/1tiebang-a.png",
+		"res://asset/Assetv5/1tiebang-b.png"
+	],
+	"hair_tie_1": [
+		"res://asset/Assetv5/1tie-a.png",
+		"res://asset/Assetv5/1tie-b.png"
+	],
+	"hair_tie_2_bangs": [
+		"res://asset/Assetv5/2tiebang-a.png",
+		"res://asset/Assetv5/2tiebang-b.png",
+		"res://asset/Assetv5/2tiebang-c.png",
+		"res://asset/Assetv5/2tiebang-d.png"
+	],
+	"hair_tie_2": [
+		"res://asset/Assetv5/2tie-a.png",
+		"res://asset/Assetv5/2tie-b.png",
+		"res://asset/Assetv5/2tie-c.png"
+	],
+	"shirt_short": [
+		"res://asset/Assetv5/shortshirt-a.png"
+	],
+	"shirt_long": [
+		"res://asset/Assetv5/longshirt-a.png",
+		"res://asset/Assetv5/longshirt-b.png"
+	],
+	"pants_short": [
+		"res://asset/Assetv5/pantshort-a.png",
+		"res://asset/Assetv5/pantshort-b.png"
+	],
+	"pants_long": [
+		"res://asset/Assetv5/pantlong-a.png",
+		"res://asset/Assetv5/pantlong-b.png"
+	],
+	"skirt_short": [
+		"res://asset/Assetv5/skirtshort-a.png",
+		"res://asset/Assetv5/skirtshort-b.png"
+	],
+	"skirt_long": [
+		"res://asset/Assetv5/skirtlong-a.png"
+	],
+}
